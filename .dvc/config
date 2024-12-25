@@ -1,0 +1,4 @@
+[core]
+    remote = myremotedvcstorage
+['remote "myremotedvcstorage"']
+    url = C:\Users\SOURAV\AppData\Local\Temp\DVC-data-storage
