@@ -25,13 +25,27 @@ katherine20@yahoo.com,"68388 Reyes Lights Suite 692
 
 """
 
-# Data to be stored in data1 are
+# Experiment 1 : Following data needs to be stored
 # 1. Remove the non-numeric columns "Email,Address,Avatar"
 # 2. Store the records for which "Length of Membership" > 3
 
+#df = df.iloc[:, 3:]
+#
+#df  = df[df['Length of Membership'] > 3]
+#
+#df.to_csv(os.path.join('data','customer.csv'))
+
+# Experiment 2 : Following data needs to be stored
+# 1. Remove the non-numeric columns "Email,Address,Avatar"
+# 2. Remove the column "Avg. Session Length"
+# 3. Store the records for which "Length of Membership" > 1
+
 df = df.iloc[:, 3:]
 
-df  = df[df['Length of Membership'] > 3]
+df.drop(columns=['Avg. Session Length'], inplace = True)
+
+df=df[df['Length of Membership']>1]
+
 
 df.to_csv(os.path.join('data','customer.csv'))
 
